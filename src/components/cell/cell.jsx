@@ -7,15 +7,10 @@ const Cell = ({ cell, idx, idy, go, setGo, cells, setCells, winningMsg, checkSco
     
     if(cell){return;}
     if (!winningMsg) {
-      console.log("dimag")
       cells[idx][idy] = go;
-      console.log("dimag2")
       setCells([...cells]);
-      console.log("dimag3")
       setGo(go === 'marshmallow' ? 'strawberry' : 'marshmallow');
-      // console.log(`${idx}, ${idy}, ${go}`)
       checkScore(idx, idy, go, cells);
-      console.log("dimag5")
     }
   };
 
